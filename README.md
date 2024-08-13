@@ -8,6 +8,10 @@
 ![Screenshot 4](/assets/rice5.png)
 ![Screenshot 5](/assets/rice3.png)
 
+## Useful stuff
+
+[Telegram theme](https://github.com/indev29/telegram-gruvbox)
+
 # Installation
 
 Later maybe idk
