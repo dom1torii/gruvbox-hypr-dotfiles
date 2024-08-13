@@ -16,7 +16,7 @@ config.window_background_opacity = 0.9
 
 config.enable_tab_bar = false
 
-config.line_height = 0.8
+config.line_height = 1
 
 config.colors = {
     foreground = '#ebdbb2',
