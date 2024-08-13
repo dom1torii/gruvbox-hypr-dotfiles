@@ -1,0 +1,14 @@
+@import url("../colors.css");
+
+window {
+    background: rgba(40,40,40,0.75);
+    border-radius: 9px;
+}
+
+image, label {
+    color: @fg-color;
+}
+
+progress {
+    background: @fg-color;
+}

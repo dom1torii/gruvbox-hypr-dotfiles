@@ -1,0 +1,145 @@
+// -*- mode: jsonc -*-
+{
+    "height": 40, // Waybar height
+    "width": 1666, // Waybar width
+    "spacing": 15, // Gaps between modules
+    "margin-top": 6,
+
+    // Choose the order of the modules
+    "modules-left": [
+	"custom/logo",
+	"custom/separator",
+        "hyprland/workspaces",
+	"custom/separator",
+	"hyprland/window",
+    ],
+    "modules-center": [
+	"custom/notification",
+	"custom/separator",
+        "clock",
+        "custom/separator",
+	"custom/weather",
+    ],
+    "modules-right": [
+	"group/languagesound",
+	"custom/separator",
+        "tray",
+	"custom/separator",
+        "custom/power"
+    ],
+
+    // Groups
+    
+    "group/languagesound": {
+	"orientation": "horizontal",
+	"modules": [
+	    "hyprland/language",
+	    "pulseaudio#output",
+	    "pulseaudio#input",
+	]
+    },
+
+
+    // Modules configuration
+
+    "custom/separator": {
+        "format": "┃",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar",
+        "return-type": "json"
+    },
+
+    "hyprland/window": {
+	"format": "> {initialTitle}",
+    	"separate-outputs": true
+    },
+    "hyprland/language": {
+        "format": "<span font='21px' rise='-3000'>󰌌</span> {}",
+        "format-en": "EN",
+	"format-et": "EE",
+        "format-ru": "RU",
+        "keyboard-name": "royuan-akko-keyboard"
+
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+  	"format-icons": {
+    	    "1": "<span font='21px'>\ue80b</span>",
+    	    "2": "<span font='24px'>\ue7ef</span>",
+    	    "3": "<span font='21px'>\ueb8e</span>",
+    	    "4": "<span font='24px'>\ue86f</span>",
+    	    "5": "<span font='24px'>\uea28</span>",
+	    "6": "<span font='21px'>\ue3af</span>",
+	    "7": "<span font='21px'>\ue405</span>",
+	    "8": "8",
+	    "9": "9",
+  	},
+        "sort-by-number": true
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+	"interval": 1,
+        "timezone": "Europe/Tallinn",
+	"format": "{:%I:%M %p}",
+        "tooltip-format": "<big>{:%I:%M:%S %p}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "pulseaudio#input": {
+	"format-source": "<span font='17px' rise='-1000'></span>",
+        "format-source-muted": "<span font='17px' rise='-1000'> </span>",
+        "format": "{format_source}",
+	"on-click": "amixer set Capture toggle"
+    },
+    "pulseaudio#output": {
+	"format": "<span font='17px' rise='-2000'>{icon}  </span>{volume}%",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+	"on-click": "pavucontrol"
+    },
+    "custom/logo": {
+	"format": "<span rise='-1000'></span>",
+	"tooltip": false
+    },
+    "custom/power": {
+        "format" : "<span rise='-1000'>⏻</span>",
+	"on-click": "wlogout -b 2",
+	"tooltip": false
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "\ue7f4<span foreground='red'><sup></sup></span>",
+        "none": "\ue7f4",
+        "dnd-notification": "\ue7f6<span foreground='red'><sup></sup></span>",
+        "dnd-none": "\ue7f6",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "\ue7f4",
+        "dnd-inhibited-notification": "\ue7f6<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": "\ue7f6"
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    },
+}

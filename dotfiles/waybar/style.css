@@ -1,0 +1,99 @@
+@import url("../colors.css");
+
+* {
+    background-color: rgba(0,0,0,0);
+    font-weight: 700;
+    font-family: 'NotoSans Nerd Font';
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+}
+
+.modules-center, .modules-left, .modules-right, tooltip, #tray menu, #custom-power {
+    background-color: @bg-color;
+}
+
+tooltip label, #tray menu, #custom-separator {
+    color: @fg-color;    
+}
+
+#workspaces button, #custom-notification {
+    color: @purple-color;
+}
+
+.modules-center, .modules-left, .modules-right, #tray {
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#custom-power, #languagesound, #tray menu  {
+    border-radius: 7px;
+}
+
+#custom-weather {
+    color: @blue-color;
+}
+
+#clock {
+    color: @yellow-color;
+}
+
+tooltip {
+    border: 1px solid @fg-color;
+}
+
+
+#custom-power {
+    font-size: 19px;
+    color: @red-color;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#languagesound {
+    color: @aqua-color;
+    margin-right: 8px;
+}
+
+#language {
+   margin-right: 7px;
+}
+
+#pulseaudio.output, #pulseaudio.input {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#tray menu {
+    border: 1px solid @fg-color;
+}
+
+#tray menu > *:hover {
+    color: @fg2-color;
+}
+
+#workspaces button label, #custom-notification{
+    font-family: 'Material Icons';
+}
+
+#workspaces button:hover {
+    color: @fg2-color;
+}
+
+#workspaces button.active {
+    background-color: @bg2-color;
+}
+
+#window {
+    color: @green-color;
+}
+
+#custom-logo {
+    font-size: 24px;
+    color: @blue-sat-color;
+}
+
+#custom-notification {
+    font-size: 21px;
+}
