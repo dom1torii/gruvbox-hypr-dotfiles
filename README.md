@@ -7,6 +7,7 @@
 ![Screenshot 3](/assets/rice4.png)
 ![Screenshot 4](/assets/rice5.png)
 ![Screenshot 5](/assets/rice3.png)
+![Screenshot 6](/assets/rice6.png)
 
 ## Useful stuff
 
