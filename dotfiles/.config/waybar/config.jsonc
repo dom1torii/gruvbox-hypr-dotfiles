@@ -47,7 +47,8 @@
         "interval": "once",
         "tooltip": false
     },
-
+    
+    //needs wttrbar to work https://github.com/bjesus/wttrbar
     "custom/weather": {
         "format": "{}°",
         "tooltip": true,
@@ -60,6 +61,8 @@
 	"format": "> {initialTitle}",
     	"separate-outputs": true
     },
+
+    //change format-*:"*" to layouts you use and keyboard-name to your keyboard name ("hyprctl devices" command)
     "hyprland/language": {
         "format": "<span font='21px' rise='-3000'>󰌌</span> {}",
         "format-en": "EN",
